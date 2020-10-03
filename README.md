@@ -10,8 +10,8 @@ Web3.js v1.2.1
 ```
 
 ```
-`$ npm ls openzeppelin-solidity`
-\`-- openzeppelin-solidity@3.2.0
+$ npm ls openzeppelin-solidity
+`-- openzeppelin-solidity@3.2.0
 ```
 
 ## Token Identification
