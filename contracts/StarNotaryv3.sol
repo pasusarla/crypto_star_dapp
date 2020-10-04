@@ -79,6 +79,8 @@ contract StarNotaryv3 is ERC721 {
     function transferStar(address _to1, uint256 _tokenId) public {
         //1. Check if the sender is the ownerOf(_tokenId)
         //2. Use the transferFrom(from, to, tokenId); function to transfer the Star
-        safeTransferFrom(ownerOf(_tokenId), _to1, _tokenId);
+//        safeTransferFrom(ownerOf(_tokenId), _to1, _tokenId);
+        require(_msgSender() == ownerOf(_tokenId), "Transfer being triggered by non-owner (note: approval alone isn't enough)");
+        _safeTransfer(ownerOf(_tokenId), _to1, _tokenId, "");
     }
 }
